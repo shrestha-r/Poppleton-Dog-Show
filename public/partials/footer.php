@@ -15,9 +15,9 @@
         <div class="footer-right">
             <p>Follow us</p>
             <div class="social">
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="https://github.com/shrestha-r" aria-label="Twitter">🐦</a>
+                <a href="https://www.facebook.com/profile.php?id=100090404736108" aria-label="Facebook">📘</a>
+                <a href="https://www.linkedin.com/in/rahulshrestha61/" aria-label="Instagram">📷</a>
+                <a href="https://github.com/shrestha-r/Poppleton-Dog-Show" aria-label="Twitter">🐦</a>
             </div>
         </div>
     </div>

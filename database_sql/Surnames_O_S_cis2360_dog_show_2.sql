@@ -829,6 +829,8 @@ ALTER TABLE `judges`
 ALTER TABLE `owners`
   ADD PRIMARY KEY (`id`);
 
+DESCRIBE owners;
+
 --
 -- AUTO_INCREMENT for dumped tables
 --

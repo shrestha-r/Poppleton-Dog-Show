@@ -32,17 +32,9 @@ $dogs = $conn->query(
     <h1>Meet the Dogs</h1>
 
     <div class="dog-grid">
-        <?php foreach ($dogs as $d):
-            /* primary image or random API */
-            $img = $conn->query(
-                "SELECT image_url FROM images WHERE dog_id = ? AND is_primary = 1 LIMIT 1"
-            )->fetch();
-            $imgSrc = $img
-                ? $img['image_url']
-                : 'https://dog.ceo/api/breed/' . strtolower(explode(' ', $d['breed'])[0]) . '/images/random';
-        ?>
+        <?php foreach ($dogs as $d):?>
             <div class="dog-card">
-                <img src="<?= $imgSrc ?>" alt="<?= htmlspecialchars($d['dog_name']) ?>"
+                <img src="<?= $d['image_url'] ?>" alt="<?= htmlspecialchars($d['dog_name']) ?>"
                      onerror="this.src='<?= APP_URL ?>/assets/images/placeholder-dog.jpg'">
                 <h3><?= htmlspecialchars($d['dog_name']) ?></h3>
                 <p><?= htmlspecialchars($d['breed']) ?></p>

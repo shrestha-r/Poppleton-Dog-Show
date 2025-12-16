@@ -79,24 +79,17 @@ $winners = $conn->query(
     <section class="dog-of-day">
         <?php
         $dog = $conn->query(
-            "SELECT d.id, d.name AS dog_name, b.name AS breed, o.name AS owner_name, o.email
+            "SELECT d.id, d.name AS dog_name, b.name AS breed, o.name AS owner_name, o.email, di.image_url as image_url
              FROM dogs d
              JOIN breeds b ON b.id = d.breed_id
              JOIN owners o ON o.id = d.owner_id
+             JOIN dog_images di ON di.dog_id = d.id
              ORDER BY RAND()
              LIMIT 1"
-        )->fetch();
-
-        $img = $conn->query(
-            "SELECT image_url FROM images WHERE dog_id = ? AND is_primary = 1 LIMIT 1"
-        )->fetch();
-        $imgSrc = $img
-            ? $img['image_url']
-            : 'https://dog.ceo/api/breed/' . strtolower(explode(' ', $dog['breed'])[0]) . '/images/random';
-        ?>
+        )->fetch(); ?>
         <div class="card">
             <span class="badge">⭐ Featured</span>
-            <img src="<?= $imgSrc ?>" alt="<?= htmlspecialchars($dog['dog_name']) ?>"
+            <img src="<?= $dog['image_url'] ?>" class="dog_image" alt="<?= htmlspecialchars($dog['dog_name']) ?>"
                  onerror="this.src='<?= APP_URL ?>/assets/images/placeholder-dog.jpg'">
             <h3><?= htmlspecialchars($dog['dog_name']) ?></h3>
             <p><strong>Breed:</strong> <?= htmlspecialchars($dog['breed']) ?></p>

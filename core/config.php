@@ -18,5 +18,6 @@ define('DB_PASS', 'FirstUserPass#010');
 // Application settings
 define('APP_NAME', 'Poppleton Dog Show');
 define('APP_URL', 'http://localhost/cis2360_dog_show');
+// define('APP_URL','https://uninterwoven-gaynelle-mimically.ngrok-free.dev');
 define('UPLOAD_PATH', __DIR__ . '/../assets/images/');
 ?>

@@ -3,7 +3,7 @@
     <div class="header-inner">
         <!-- Logo -->
         <a href="<?= APP_URL ?>/public/01_index.php" class="logo">
-           <a href="<?= APP_URL ?>/public/01_index.php" class="logo"><span class="logo-emoji">&#x1F43E;</span></a>
+            <span class="logo-emoji">&#x1F43E;</span>
         </a>
 
         <!-- Navigation -->
