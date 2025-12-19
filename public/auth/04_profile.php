@@ -41,7 +41,7 @@ if (!$user) {
 </head>
 <body>
 
-<?php include __DIR__ . '/partials/header.php'; ?>
+<?php include __DIR__ . '/../partials/header.php'; ?>
 
 <main class="owner-page">
 
@@ -69,7 +69,7 @@ if (!$user) {
 
 </main>
 
-<?php include __DIR__ . '/partials/footer.php'; ?>
+<?php include __DIR__ . '/../partials/footer.php'; ?>
 
 </body>
 </html>
