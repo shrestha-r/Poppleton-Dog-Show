@@ -19,7 +19,7 @@
             <?php if (isset($_SESSION['user_id'])): ?>
                 <button class="account-toggle">Account ▾</button>
                 <ul class="account-dropdown">
-                    <li><a href="<?= APP_URL ?>/public/owner.php">Profile</a></li>
+                    <li><a href="<?= APP_URL ?>/public/auth/04_profile.php">Profile</a></li>
                     <li><a href="<?= APP_URL ?>/public/auth/03_logout.php">Logout</a></li>
                 </ul>
             <?php else: ?>
@@ -39,7 +39,7 @@
         <a href="<?= APP_URL ?>/public/03_dogs.php">Dogs</a>
         <a href="<?= APP_URL ?>/public/04_contact.php">Contact</a>
         <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="<?= APP_URL ?>/public/owner.php">Profile</a>
+            <a href="<?= APP_URL ?>/public/auth/04_profile.php">Profile</a>
             <a href="<?= APP_URL ?>/public/auth/03_logout.php">Logout</a>
         <?php else: ?>
             <a href="<?= APP_URL ?>/public/auth/01_login.php">Login</a>

@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if ($sent): ?>
             <p class="success">Thanks! Your message has been sent.</p>
         <?php else: ?>
-            <form method="post" class="auth-form">
+            <form method="post" class="auth-card">
                 <label>Name
                     <input type="text" name="name" required>
                 </label>
